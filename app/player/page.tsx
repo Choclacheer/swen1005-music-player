@@ -8,7 +8,7 @@ import VolumeControl from '@/components/VolumeControl';
 import PlayerActions from '@/components/PlayerActions';
 
 export default function PlayerPage() {
-  const audioRef = useRef(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
   const touchStartX = useRef(null);
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
