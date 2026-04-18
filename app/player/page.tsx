@@ -81,13 +81,13 @@ export default function PlayerPage() {
     setProgress(0);
   };
 
-  const handleTouchStart = (e) => {
+  const handleTouchStart = (e: React.TouchEvent<HTMLImageElement>) => {
     touchStartX.current = e.changedTouches[0].screenX;
   };
 
-  const handleTouchEnd = (e) => {
+  const handleTouchEnd = (e: React.TouchEvent<HTMLImageElement>) => {
     const touchEndX = e.changedTouches[0].screenX;
-    const diff = touchStartX.current - touchEndX;
+    const diff = (touchStartX.current ?? 0) - touchEndX;
     if (diff > 30) goToNextTrack();
     else if (diff < -30) goToPreviousTrack();
   };
