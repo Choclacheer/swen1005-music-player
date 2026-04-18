@@ -9,7 +9,7 @@ import PlayerActions from '@/components/PlayerActions';
 
 export default function PlayerPage() {
   const audioRef = useRef<HTMLAudioElement>(null);
-  const touchStartX = useRef(null);
+  const touchStartX = useRef<number | null>(null);
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
