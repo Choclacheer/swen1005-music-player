@@ -20,7 +20,7 @@ export default function HomePage() {
     currentPage * pageSize + pageSize
   );
 
-  const playSong = (index) => {
+  const playSong = (index: number) => {
     localStorage.setItem('player-track-index', String(index));
     router.push('/player');
   };
