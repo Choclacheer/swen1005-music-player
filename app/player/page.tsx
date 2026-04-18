@@ -52,7 +52,7 @@ export default function PlayerPage() {
     }
   };
 
-  const handleSeek = (event) => {
+  const handleSeek = (event: React.ChangeEvent<HTMLInputElement>) => {
     const audio = audioRef.current;
     const nextTime = Number(event.target.value);
     if (!audio) return;
@@ -60,7 +60,7 @@ export default function PlayerPage() {
     setProgress(nextTime);
   };
 
-  const handleVolumeChange = (event) => {
+  const handleVolumeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const audio = audioRef.current;
     const nextVolume = Number(event.target.value);
     setVolume(nextVolume);
